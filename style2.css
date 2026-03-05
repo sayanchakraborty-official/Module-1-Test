@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #78c51c;
+  font-family: "Work Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: 30px;
+}
+
+.card-section {
+  margin-top: 50px;
+  min-height: 100vh;
+  padding-block: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 88px;
+  background-color: #2a6b2c;
+  padding: 55px;
+  border-radius: 20px;
+}
+.card-img {
+  height: 100%;
+  width: 60%;
+}
+.card-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #eef2e3;
+}
+.card-text h5 {
+  color: #c8f169;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.card-text h2 {
+  font-family: "Noticia Text", serif;
+  font-size: 3.5rem;
+}
+
+.card-text p {
+  font-size: 1.15rem;
+  font-weight: 300;
+  line-height: 25px;
+  max-width: 80%;
+}
+.primary-btn {
+  background-color: transparent;
+  padding-inline: 28px;
+  padding-block: 12px;
+  border: 1px solid #eef2e3;
+  color: #eef2e3;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.card-grid {
+  width: 150%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px;
+  position: relative !important;
+}
+
+.grid-box {
+  background-color: #c8f169;
+  border-radius: 20px;
+  min-height: 170px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: flex-end;
+  min-width: 200px;
+}
+.grid-box p {
+  font-size: 0.9rem;
+}
+.grid-box a img {
+  display: block;
+  object-fit: cover;
+}
+.card-2 {
+  gap: 50px;
+}
+
+.box-2 {
+  grid-row: 1/3;
+  grid-column: 2/4;
+  clip-path: path(
+    "M20 0 L400 0 A20 20 0 0 1 420 20 L420 170 A20 20 0 0 1 400 190 L238 190 A20 20 0 0 0 218 210 L218 340 A20 20 0 0 1 198 360 L20 360 A20 20 0 0 1 0 340 L0 20 A20 20 0 0 1 20 0 Z"
+  );
+}
+
+.box-2 {
+  width: 450px;
+}
+.box-3 {
+  grid-row: 2/4;
+  width: 14rem;
+  height: 22rem;
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  clip-path: path(
+    "M 10 0 L 179 0 A 10 10 0 0 1 189 10 L 189 198 A 10 10 0 0 0 199 208 L 214 208 A 10 10 0 0 1 224 218 L 224 342 A 10 10 0 0 1 214 352 L 10 352 A 10 10 0 0 1 0 342 L 0 10 A 10 10 0 0 1 10 0 Z"
+  );
+}
+
+.box-5 {
+  position: absolute !important;
+  bottom: 0;
+  right: 10px;
+  height: 60%;
+}
+
+.box-4 {
+  width: 120px !important;
+  position: relative;
+  left: 25px;
+  grid-row: 3/4;
+  grid-column: 2/4;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    max-width: 960px;
+  }
+  .card {
+    flex-wrap: wrap;
+  }
+  .card-2 {
+    flex-direction: column;
+  }
+
+  .card-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    position: static;
+  }
+
+  .grid-box {
+    width: 100% !important;
+    min-width: 0;
+    height: auto;
+    min-height: 120px;
+  }
+
+  .card-img {
+    height: 100%;
+    width: 96%;
+  }
+
+  .box-2,
+  .box-3,
+  .box-4,
+  .box-5 {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    grid-column: auto;
+    grid-row: auto;
+    clip-path: none;
+    left: auto;
+    right: auto;
+    bottom: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+  .card {
+    padding: 20px;
+  }
+}
